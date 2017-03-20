@@ -3,17 +3,19 @@
 ## Overview
 This project is the back-end code for our electric homemade teapot. The teapot has an extra solenoid valve which allows to fill a cup with the button on STM.
 ## Description
-To make this project work you need the following things:
-	-STM32 controller
-	-Power module with two relays and optically isolated 5V input - RL02_ISO
-	-Temperature sensor - DS18B20
-	-Water heater - 1000W/230AC
-	-Solenoid valve
-	-4x8 segment display
-	-3x button
-You need to connect it in the following way:
-The main functionality of that project is that it keeps the best temperature for your beverage. All you have to do is to choose temperature. To controll that in our project it is used PI controller. 
-	
+The main functionality of this project is the ability to keep the best temperature for your beverage. All you have to do is choose the temperature. Desired temperature is maintained by a PI controller and can be adjusted with two buttons. Current temperature is always shown on the segment display. Third button is used to open the solenoid valve and pour your beverage into a cup. 
+Project components:
+- STM32 microcontroller
+- Power module with two relays and optically isolated 5V input - RL02_ISO
+- Temperature sensor - DS18B20
+- Water heater - 1000W/230AC
+- Solenoid valve DC 12V
+- 4x8 segment display
+- Waveshare 8 Push Buttons module  
+
+Electrical diagram:  
+![alt tag](https://i.imgur.com/zinWzyq.png)  
+
 ## Tools
 //TODO
 ## How to run
