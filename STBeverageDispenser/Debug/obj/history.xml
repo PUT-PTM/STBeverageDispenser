@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m4 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F407VG -DSTM32F4XX -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\..\.. -I..\..\..\..\..\PTMProjekt\cmsis -I..\..\..\..\..\PTMProjekt\cmsis_boot -I..\..\..\..\..\PTMProjekt\cmsis_lib -I..\..\..\..\..\PTMProjekt\cmsis_lib\include -I..\..\..\..\..\PTMProjekt">
+      <target file="stm32f4xx_rcc.o" lastModified="15aeb8a0a2c">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="15aeb85c25e"/>
+      </target>
+      <target file="system_stm32f4xx.o" lastModified="15aeb8a0b5e">
+         <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="15aeb88b4ae"/>
+      </target>
+      <target file="stm32f4xx_gpio.o" lastModified="15aeb8a0ae5">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="15aeb85c22e"/>
+      </target>
+      <target file="main.o" lastModified="15aeb90840d">
+         <source file="..\..\..\main.c" lastModified="15aeb907c1b"/>
+      </target>
+      <target file="startup_stm32f4xx.o" lastModified="15aeb8a08ca">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="15aeb85af7c"/>
+      </target>
+   </processor>
+</history>
