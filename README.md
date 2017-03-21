@@ -17,7 +17,7 @@ Electrical diagram:
 ![alt tag](https://i.imgur.com/zinWzyq.png)  
 
 ## Tools
-- ColIDE version 1.7.8
+- CoIDE v1.7.8
 - Language C
 ## How to run
 //TODO
