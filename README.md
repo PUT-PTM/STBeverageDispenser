@@ -17,7 +17,8 @@ Electrical diagram:
 ![alt tag](https://i.imgur.com/zinWzyq.png)  
 
 ## Tools
-//TODO
+- ColIDE version 1.7.8
+- Language C
 ## How to run
 //TODO
 ## How to compile
