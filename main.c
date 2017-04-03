@@ -17,6 +17,38 @@ struct Display_Info
 }Temperature;
 
 
+void Temperature_Increment()
+{
+    if (Temperature.number[0] < 1)
+    {
+        Temperature.number[2]++;
+        for (int i = 2; i > 0; i--)
+        {
+            if (Temperature.number[i] > 9)
+            {
+                Temperature.number[i] = 0;
+                Temperature.number[i - 1]++;
+            }
+        }
+    }
+}
+
+void Temperature_Decrement()
+{
+    if (Temperature.number[1] != 3 || Temperature.number[2] != 0)
+    {
+        Temperature.number[2]--;
+        for (int i = 2; i > 0; i--)
+        {
+            if (Temperature.number[i] < 0)
+            {
+                Temperature.number[i] = 9;
+                if (i != 0) Temperature.number[i - 1]--;
+            }
+        }
+    }
+}
+
 
 void TIM2_IRQHandler(void)
 	{
