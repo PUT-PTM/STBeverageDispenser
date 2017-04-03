@@ -63,7 +63,7 @@ void EXTI4_IRQHandler(void)
 {
 	if(EXTI_GetITStatus(EXTI_Line4) != RESET)
 	   {
-		GPIO_ToggleBits(GPIOD,GPIO_Pin_12);
+		Temperature_Increment();
 		TIM_Cmd(TIM2,ENABLE);
 		while(!TIM_GetFlagStatus(TIM2,TIM_FLAG_Update))
 			{
@@ -79,7 +79,7 @@ void EXTI9_5_IRQHandler(void)
 {
 	if(EXTI_GetITStatus(EXTI_Line5) != RESET)
 		{
-		GPIO_ToggleBits(GPIOD,GPIO_Pin_13);
+		Temperature_Decrement();
 		TIM_Cmd(TIM2,ENABLE);
 		while(!TIM_GetFlagStatus(TIM2,TIM_FLAG_Update))
 			{
@@ -167,11 +167,15 @@ void TIM3_IRQHandler(void)
  	if(TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET)
  	{
 		GPIO_ResetBits(GPIOB,GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_4);
+		GPIO_SetBits(GPIOD,GPIO_Pin_9);
  		switch(counter)
  		{
  		case 0:
+ 			if(Temperature.number[0] != 0)
+ 			{
  			Display_Number(Temperature.number[0]);
  			GPIO_SetBits(GPIOB,GPIO_Pin_0);
+ 			}
  			break;
  		case 1:
  			Display_Number(Temperature.number[1]);
@@ -179,6 +183,7 @@ void TIM3_IRQHandler(void)
  			break;
  		case 2:
  			Display_Number(Temperature.number[2]);
+ 			GPIO_ResetBits(GPIOD,GPIO_Pin_9);
  			GPIO_SetBits(GPIOB,GPIO_Pin_2);
  			break;
  		case 3:
@@ -224,7 +229,7 @@ void GPIOE_Init()
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
 }
 
-void InitTim2WithInterruption(int period,int prescaler)
+void Init_Tim2_With_Interruption(int period,int prescaler)
 {
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,ENABLE);
 
@@ -247,7 +252,7 @@ void InitTim2WithInterruption(int period,int prescaler)
 }
 
 
-void InitExtiKeyboard()
+void Init_Exti_Keyboard()
 {
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE,ENABLE);
 
@@ -281,8 +286,6 @@ void InitExtiKeyboard()
 	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
 	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
 	EXTI_Init(&EXTI_InitStructure);
-
-
 
 	NVIC_InitTypeDef NVIC_InitStructure1;
 	NVIC_InitStructure1.NVIC_IRQChannel = EXTI9_5_IRQn;
@@ -359,8 +362,8 @@ int main(void)
 	GPIOD_Init();
 	GPIOE_Init();
 	TIM3_Interruption_Enable(83,999);
-	InitExtiKeyboard();
-	InitTim2WithInterruption(839,499);
+	Init_Exti_Keyboard();
+	Init_Tim2_With_Interruption(8399,499);
 	Temperature.number[0] = 1;
 	Temperature.number[1] = 2;
 	Temperature.number[2] = 3;
