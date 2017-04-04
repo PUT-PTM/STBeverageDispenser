@@ -41,7 +41,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Tajne Dokumenty/studia/Sem 4/PTM/STBeverageDispenser/main.c" title="main.c" tooltip="D:/Tajne Dokumenty/studia/Sem 4/PTM/STBeverageDispenser/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STBeverageDispenser/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="480" selectionTopPixel="386"/>
+<editorState selectionHorizontalPixel="30" selectionLength="0" selectionOffset="2305" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -267,20 +267,7 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/main.c"/>
-<editor factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser">
-<subPage horizontalPosition="0" selectedItemId="526" subPageIndex="2" verticalPosition="600"/>
-</editor>
 </editors>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="141" y="0"/>
-</item>
-<item historyLabel="Repository" index="1"/>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="141" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="8962" y="39"/>
-</item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="3278" y="0"/>
 </item>
@@ -415,6 +402,18 @@
 </item>
 <item historyLabel="main.c" index="0">
 <position/>
+</item>
+<item historyLabel="main.c" index="0">
+<position/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="333" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="352" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="405" y="0"/>
 </item>
 <item active="true" historyLabel="main.c" index="0">
 <position/>

@@ -13,40 +13,33 @@
 int counter=0;
 struct Display_Info
 {
-	int number[4];
+	int target;
+
+	int Target[4];
+	int Current[4] = { 0, 3, 6, 6};
 }Temperature;
 
 
+void UpdateTarget()
+{
+    Temperature.Target[0] = Temperature.target / 1000;
+    Temperature.Target[1] = ( Temperature.target / 100) %10;
+    Temperature.Target[2] = ( Temperature.target / 10) %10;
+    Temperature.Target[3] = Temperature.target%10;
+}
+
 void Temperature_Increment()
 {
-    if (Temperature.number[0] < 1)
-    {
-        Temperature.number[2]++;
-        for (int i = 2; i > 0; i--)
-        {
-            if (Temperature.number[i] > 9)
-            {
-                Temperature.number[i] = 0;
-                Temperature.number[i - 1]++;
-            }
-        }
-    }
+    if(Temperature.target < 90)
+        Temperature.target+= 10;
+    UpdateTarget();
 }
 
 void Temperature_Decrement()
 {
-    if (Temperature.number[1] != 3 || Temperature.number[2] != 0)
-    {
-        Temperature.number[2]--;
-        for (int i = 2; i > 0; i--)
-        {
-            if (Temperature.number[i] < 0)
-            {
-                Temperature.number[i] = 9;
-                if (i != 0) Temperature.number[i - 1]--;
-            }
-        }
-    }
+    if (Temperature.target > 20)
+        Temperature.target -= 10;
+    UpdateTarget();
 }
 
 
@@ -168,26 +161,29 @@ void TIM3_IRQHandler(void)
  	{
 		GPIO_ResetBits(GPIOB,GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_4);
 		GPIO_SetBits(GPIOD,GPIO_Pin_9);
+
+
+
  		switch(counter)
  		{
  		case 0:
- 			if(Temperature.number[0] != 0)
+ 			if(Temperature.Target[0] != 0)
  			{
- 			Display_Number(Temperature.number[0]);
+ 			Display_Number(Temperature.Target[0]);
  			GPIO_SetBits(GPIOB,GPIO_Pin_0);
  			}
  			break;
  		case 1:
- 			Display_Number(Temperature.number[1]);
+ 			Display_Number(Temperature.Target[1]);
  			GPIO_SetBits(GPIOB,GPIO_Pin_1);
  			break;
  		case 2:
- 			Display_Number(Temperature.number[2]);
+ 			Display_Number(Temperature.Target[2]);
  			GPIO_ResetBits(GPIOD,GPIO_Pin_9);
  			GPIO_SetBits(GPIOB,GPIO_Pin_2);
  			break;
  		case 3:
- 			Display_Number(Temperature.number[3]);
+ 			Display_Number(Temperature.Target[3]);
  			GPIO_SetBits(GPIOB,GPIO_Pin_4);
  			break;
  		}
@@ -364,10 +360,10 @@ int main(void)
 	TIM3_Interruption_Enable(83,999);
 	Init_Exti_Keyboard();
 	Init_Tim2_With_Interruption(8399,499);
-	Temperature.number[0] = 1;
-	Temperature.number[1] = 2;
-	Temperature.number[2] = 3;
-	Temperature.number[3] = 4;
+	Temperature.Target[0] = 1;
+	Temperature.Target[1] = 2;
+	Temperature.Target[2] = 3;
+	Temperature.Target[3] = 4;
 
 	for(;;)
 	{
