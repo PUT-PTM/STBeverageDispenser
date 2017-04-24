@@ -1,11 +1,12 @@
-#include "stm32f4xx_conf.h"
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_conf.h"
 #include "stm32f4xx_tim.h"
-#include "stm32f4xx_gpio.h"
-#include "stm32f4xx_rcc.h"
 #include "stm32f4xx_exti.h"
+#include "defines.h"
+#include "tm_stm32f4_delay.h"
+#include "tm_stm32f4_onewire.h"
+#include "tm_stm32f4_ds18b20.h"
 #include "stm32f4xx_syscfg.h"
 #include "misc.h"
 
@@ -14,9 +15,9 @@ int counter=0;
 struct Display_Info
 {
 	int target;
-
+	int current;
 	int Target[4];
-	int Current[4] = { 0, 3, 6, 6};
+	int Current[4];
 }Temperature;
 
 
@@ -26,6 +27,14 @@ void UpdateTarget()
     Temperature.Target[1] = ( Temperature.target / 100) %10;
     Temperature.Target[2] = ( Temperature.target / 10) %10;
     Temperature.Target[3] = Temperature.target%10;
+}
+
+void UpdateCurrent()
+{
+    Temperature.Current[0] = Temperature.current / 1000;
+    Temperature.Current[1] = ( Temperature.current / 100) %10;
+    Temperature.Current[2] = ( Temperature.current / 10) %10;
+    Temperature.Current[3] = Temperature.current%10;
 }
 
 void Temperature_Increment()
@@ -155,9 +164,9 @@ void Display_Number(int number)
 	}
 }
 
-void TIM3_IRQHandler(void)
+void TIM4_IRQHandler(void)
 {
- 	if(TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET)
+ 	if(TIM_GetITStatus(TIM4, TIM_IT_Update) != RESET)
  	{
 		GPIO_ResetBits(GPIOB,GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_4);
 		GPIO_SetBits(GPIOD,GPIO_Pin_9);
@@ -167,30 +176,30 @@ void TIM3_IRQHandler(void)
  		switch(counter)
  		{
  		case 0:
- 			if(Temperature.Target[0] != 0)
+ 			if(Temperature.Current[0] != 0)
  			{
- 			Display_Number(Temperature.Target[0]);
+ 			Display_Number(Temperature.Current[0]);
  			GPIO_SetBits(GPIOB,GPIO_Pin_0);
  			}
  			break;
  		case 1:
- 			Display_Number(Temperature.Target[1]);
+ 			Display_Number(Temperature.Current[1]);
  			GPIO_SetBits(GPIOB,GPIO_Pin_1);
  			break;
  		case 2:
- 			Display_Number(Temperature.Target[2]);
+ 			Display_Number(Temperature.Current[2]);
  			GPIO_ResetBits(GPIOD,GPIO_Pin_9);
  			GPIO_SetBits(GPIOB,GPIO_Pin_2);
  			break;
  		case 3:
- 			Display_Number(Temperature.Target[3]);
+ 			Display_Number(Temperature.Current[3]);
  			GPIO_SetBits(GPIOB,GPIO_Pin_4);
  			break;
  		}
  		counter++;
  		counter %=4;
  	}
-    TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
+    TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
  	}
 
 
@@ -329,27 +338,34 @@ void Init_Exti_Keyboard()
 
 }
 
-void TIM3_Interruption_Enable(int period, int prescaler)
+void TIM4_Interruption_Enable(int period, int prescaler)
 {
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
-	TIM_Cmd(TIM3, ENABLE);
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);
+	TIM_Cmd(TIM4, ENABLE);
 
 	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
 	TIM_TimeBaseStructure.TIM_Period = period;
 	TIM_TimeBaseStructure.TIM_Prescaler = prescaler;
 	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
 	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
-	TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+	TIM_TimeBaseInit(TIM4, &TIM_TimeBaseStructure);
 
 	NVIC_InitTypeDef NVIC_InitStructure;
-	NVIC_InitStructure.NVIC_IRQChannel = TIM3_IRQn;
+	NVIC_InitStructure.NVIC_IRQChannel = TIM4_IRQn;
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x00;
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x00;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
-	TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
-	TIM_ITConfig(TIM3, TIM_IT_Update, ENABLE);
+	TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
+	TIM_ITConfig(TIM4, TIM_IT_Update, ENABLE);
 }
+
+uint8_t byte;
+
+uint8_t devices, i, j, count, alarm_count;
+uint8_t device[8];
+uint8_t alarm_device[8];
+float temps;
 
 int main(void)
 {
@@ -357,17 +373,44 @@ int main(void)
 
 	GPIOD_Init();
 	GPIOE_Init();
-	TIM3_Interruption_Enable(83,999);
+
 	Init_Exti_Keyboard();
 	Init_Tim2_With_Interruption(8399,499);
+	TIM4_Interruption_Enable(83,999);
 	Temperature.Target[0] = 1;
 	Temperature.Target[1] = 2;
 	Temperature.Target[2] = 3;
 	Temperature.Target[3] = 4;
 
-	for(;;)
-	{
+    TM_OneWire_t OneWire1;
 
-	}
 
+    TM_DELAY_Init();
+
+    TM_OneWire_Init(&OneWire1, GPIOA, GPIO_Pin_7);
+
+
+    devices = TM_OneWire_First(&OneWire1);
+        TM_OneWire_GetFullROM(&OneWire1, device);
+
+
+        TM_DS18B20_SetResolution(&OneWire1, device, TM_DS18B20_Resolution_12bits);
+
+        TM_DS18B20_SetAlarmHighTemperature(&OneWire1, device, 100);
+
+            TM_DS18B20_DisableAlarmTemperature(&OneWire1, device);
+
+while(1){
+
+		        TM_DS18B20_StartAll(&OneWire1);
+
+		        while (!TM_DS18B20_AllDone(&OneWire1));
+
+		        TM_DS18B20_Read(&OneWire1, device, &temps);
+
+		        Temperature.current = (int)(temps*10);
+		        UpdateCurrent();
+
+		        Delayms(1000);
 }
+ }
