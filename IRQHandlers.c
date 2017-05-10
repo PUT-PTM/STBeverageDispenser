@@ -11,6 +11,15 @@ void TIM2_IRQHandler(void)
     TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	}
 
+void TIM5_IRQHandler(void)
+	{
+	if(TIM_GetITStatus(TIM5, TIM_IT_Update) != RESET)
+      {
+		GPIO_ToggleBits(GPIOD,GPIO_Pin_14);
+      }
+    TIM_ClearITPendingBit(TIM5, TIM_IT_Update);
+	}
+
 void EXTI4_IRQHandler(void)
 {
 	if(EXTI_GetITStatus(EXTI_Line4) != RESET)
