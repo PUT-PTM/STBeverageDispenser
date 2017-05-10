@@ -12,4 +12,4 @@ void GPIOB_Init();
 void TIM2_Init(int period, int prescaler);
 void Init_Exti_Keyboard();
 void TIM4_Init(int period, int prescaler);
-void TIM5_Init(int period, int prescaler);
+void TIM5_Init_PWM(int period, int prescaler);

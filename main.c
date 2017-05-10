@@ -15,14 +15,16 @@
 
 uint8_t byte;
 
-#define K1 5.94
-#define K2 347.19
+#define K1 1
+#define K2 0.1
 
 uint8_t devices, i, j, count, alarm_count;
 uint8_t device[8];
 uint8_t alarm_device[8];
 float temps;
 
+
+int xd; float wynik;
 int main(void)
 {
 	int integral = 0;
@@ -34,7 +36,7 @@ int main(void)
 	Init_Exti_Keyboard();
 	TIM2_Init(8399,499);
 	TIM4_Init(83,999);
-	TIM5_Init(8399,499);
+	TIM5_Init_PWM(83999,999);
 	Temperature.Target[0] = 0;
 	Temperature.Target[1] = 3;
 	Temperature.Target[2] = 0;
@@ -59,6 +61,8 @@ int main(void)
             TM_DS18B20_DisableAlarmTemperature(&OneWire1, device);
             Temperature.target = 300;
 
+
+
 while(1){
 
 
@@ -70,9 +74,19 @@ while(1){
 
 		        Temperature.current = (int)(temps*10);
 		        UpdateCurrent();
-		        integral += Temperature.target - Temperature.current;
-		        TIM5->PSC = K1*(Temperature.target - Temperature.current) + K2*integral;
+		        if(integral < 2000000)
+		        	integral += Temperature.target - Temperature.current;
+		        wynik = (K1*(Temperature.target - Temperature.current) + K2*integral);
+		        if(wynik < 10000 && wynik > 0)
+		        {
+			        wynik = wynik/10;
+			        TIM5->CCR2 =wynik;
+		        }
+		        else{
+		        	TIM5->CCR2 = 0;
+		        }
 
+		        xd = TIM5->CCR2;
 		        Delayms(1000);
 }
  }
