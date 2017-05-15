@@ -15,8 +15,8 @@
 
 uint8_t byte;
 
-#define K1 1
-#define K2 0.1
+#define K1 10
+#define K2 0.3
 
 uint8_t devices, i, j, count, alarm_count;
 uint8_t device[8];
@@ -36,7 +36,7 @@ int main(void)
 	Init_Exti_Keyboard();
 	TIM2_Init(8399,499);
 	TIM4_Init(83,999);
-	TIM5_Init_PWM(83999,999);
+	TIM5_Init_PWM(999,83999);
 	Temperature.Target[0] = 0;
 	Temperature.Target[1] = 3;
 	Temperature.Target[2] = 0;
@@ -59,7 +59,7 @@ int main(void)
         TM_DS18B20_SetAlarmHighTemperature(&OneWire1, device, 100);
 
             TM_DS18B20_DisableAlarmTemperature(&OneWire1, device);
-            Temperature.target = 300;
+            Temperature.target = 900;
 
 
 
@@ -77,9 +77,8 @@ while(1){
 		        if(integral < 2000000)
 		        	integral += Temperature.target - Temperature.current;
 		        wynik = (K1*(Temperature.target - Temperature.current) + K2*integral);
-		        if(wynik < 10000 && wynik > 0)
+		        if(wynik < 84000 && wynik > 0)
 		        {
-			        wynik = wynik/10;
 			        TIM5->CCR2 =wynik;
 		        }
 		        else{
