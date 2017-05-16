@@ -15,16 +15,15 @@
 
 uint8_t byte;
 
-#define K1 10
-#define K2 0.3
+#define K1 50
+#define K2 1
 
 uint8_t devices, i, j, count, alarm_count;
 uint8_t device[8];
 uint8_t alarm_device[8];
 float temps;
 
-
-int xd; float wynik;
+int wynik;
 int main(void)
 {
 	int integral = 0;
@@ -61,7 +60,7 @@ int main(void)
             TM_DS18B20_DisableAlarmTemperature(&OneWire1, device);
             Temperature.target = 900;
 
-
+int sum;
 
 while(1){
 
@@ -74,18 +73,25 @@ while(1){
 
 		        Temperature.current = (int)(temps*10);
 		        UpdateCurrent();
-		        if(integral < 2000000)
-		        	integral += Temperature.target - Temperature.current;
-		        wynik = (K1*(Temperature.target - Temperature.current) + K2*integral);
-		        if(wynik < 84000 && wynik > 0)
+		        sum = Temperature.target - Temperature.current;
+		        if(integral < 2000 && sum>0)
+		        	integral += sum;
+		        else if(sum<=0)
 		        {
+		        	integral += sum;
+		        }
+		        wynik = (K1*(sum) + K2*integral);
+		        if (wynik < 4000 && wynik >= 0)
+		        {
+		        	wynik = wynik/10;
 			        TIM5->CCR2 =wynik;
 		        }
-		        else{
+		        else if (wynik < 0){
 		        	TIM5->CCR2 = 0;
 		        }
-
-		        xd = TIM5->CCR2;
+		        else{
+		        	 TIM5-> CCR2 = 400;
+		        }
 		        Delayms(1000);
 }
  }
