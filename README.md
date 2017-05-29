@@ -26,7 +26,7 @@ Electrical diagram:
 ## Future improvements
 //TODO
 ## Attributions
-//TODO
+Used DS18B20, OneWire, GPIO and Delay libraries can be found [here](https://github.com/MaJerle/stm32f429).
 ## License
 Code licensed under the The MIT License.
 
