@@ -6,7 +6,6 @@
 #include "stm32f4xx_exti.h"
 #include "Temperature.h"
 
-// int counter;
 
 void TIM2_IRQHandler(void);
 void EXTI4_IRQHandler(void);

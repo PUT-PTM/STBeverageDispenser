@@ -81,7 +81,6 @@ void TIM5_Init_PWM(int period, int prescaler)
 {
 	//PA1 CH2
 
-
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM5, ENABLE);
 
@@ -93,7 +92,7 @@ void TIM5_Init_PWM(int period, int prescaler)
 	TIM_TimeBaseStructure.TIM_CounterMode =  TIM_CounterMode_Up;
 	TIM_TimeBaseInit(TIM5, &TIM_TimeBaseStructure);
 
-		TIM_Cmd(TIM5, ENABLE);
+	TIM_Cmd(TIM5, ENABLE);
 
 	TIM_OCInitTypeDef TIM_OCInitStructure;
 		    	/* PWM1 Mode configuration: */
@@ -166,7 +165,6 @@ void Init_Exti_Keyboard()
 	EXTI_Init(&EXTI_InitStructure1);
 
 
-
 	NVIC_InitTypeDef NVIC_InitStructure2;
 	NVIC_InitStructure2.NVIC_IRQChannel = EXTI9_5_IRQn;
 	NVIC_InitStructure2.NVIC_IRQChannelPreemptionPriority = 0x00;
@@ -194,5 +192,4 @@ void Init_Exti_Keyboard()
 	EXTI_InitStructure4.EXTI_Trigger = EXTI_Trigger_Rising;
 	EXTI_InitStructure4.EXTI_LineCmd = ENABLE;
 	EXTI_Init(&EXTI_InitStructure4);
-
 }
