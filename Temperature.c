@@ -18,14 +18,14 @@ void UpdateCurrent()
 
 void Temperature_Increment()
 {
-    if(Temperature.target < 90)
+    if(Temperature.target < 900)
         Temperature.target+= 10;
     UpdateTarget();
 }
 
 void Temperature_Decrement()
 {
-    if (Temperature.target > 20)
+    if (Temperature.target > 200)
         Temperature.target -= 10;
     UpdateTarget();
 }

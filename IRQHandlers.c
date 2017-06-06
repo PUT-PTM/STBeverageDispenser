@@ -24,8 +24,8 @@ void EXTI4_IRQHandler(void)
 {
 	if(EXTI_GetITStatus(EXTI_Line4) != RESET)
 	   {
-			Temperature_Increment();
 			set_temperature = 1;
+			Temperature_Increment();
 			TIM_Cmd(TIM2,ENABLE);
 			while(!TIM_GetFlagStatus(TIM2,TIM_FLAG_Update))
 				{
@@ -41,8 +41,8 @@ void EXTI9_5_IRQHandler(void)
 {
 	if(EXTI_GetITStatus(EXTI_Line5) != RESET)
 		{
-			Temperature_Decrement();
 			set_temperature = 1;
+			Temperature_Decrement();
 			TIM_Cmd(TIM2,ENABLE);
 			while(!TIM_GetFlagStatus(TIM2,TIM_FLAG_Update))
 				{
@@ -66,7 +66,7 @@ void EXTI9_5_IRQHandler(void)
         }
 	if(EXTI_GetITStatus(EXTI_Line7) != RESET)
 		{
-			GPIO_SetBits(GPIOD,GPIO_Pin_15);
+			GPIO_ToggleBits(GPIOD,GPIO_Pin_15);
 			TIM_Cmd(TIM2,ENABLE);
 			while(!TIM_GetFlagStatus(TIM2,TIM_FLAG_Update))
 				{
@@ -74,7 +74,6 @@ void EXTI9_5_IRQHandler(void)
 			TIM_ClearFlag(TIM2,TIM_FLAG_Update);
 			TIM_Cmd(TIM2,DISABLE);
 			TIM2->CNT=0;
-			GPIO_ResetBits(GPIOD,GPIO_Pin_15);
 			EXTI_ClearITPendingBit(EXTI_Line7);
 		}
 }
