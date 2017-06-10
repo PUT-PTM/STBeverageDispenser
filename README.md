@@ -49,10 +49,10 @@ PA7	|	OneWire transmition
 
 stm32 | Buttons module
 ---|---
-PA4	|	K0
-PA5	|	K1
-PA6	|	K2
-PA7	|	K3  
+PE4	|	K0
+PE5	|	K1
+PE6	|	K2
+PE7	|	K3  
 
 Then build the project and transfer to your STM32F4 device.
 ## How to compile
@@ -68,5 +68,5 @@ Code licensed under the The MIT License.
 - [Robert Kosakowski](https://github.com/Kosert)
 - [Dawid Kuliński](https://github.com/DawidKulinski)
 
-The project was conducted during the Microprocessor Lab course held by the Institute of Control and Information Engineering, Poznan University of Technology.
+The project was conducted during the Microprocessor Lab course held by the Institute of Control and Information Engineering, Poznan University of Technology.  
 Supervisor: Tomasz Mańkowski
