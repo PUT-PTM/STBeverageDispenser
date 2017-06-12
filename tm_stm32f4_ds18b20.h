@@ -114,7 +114,6 @@
 
 #include "stm32f4xx.h"
 #include "tm_stm32f4_onewire.h"
-#include "defines.h"
 
 /* OneWire version check */
 #if TM_ONEWIRE_H < 200

@@ -101,14 +101,14 @@
     <File name="IRQHandlers.c" path="IRQHandlers.c" type="1"/>
     <File name="tm_stm32f4_ds18b20.c" path="tm_stm32f4_ds18b20.c" type="1"/>
     <File name="tm_stm32f4_onewire.h" path="tm_stm32f4_onewire.h" type="1"/>
-    <File name="cmsis" path="" type="2"/>
     <File name="cmsis_lib/source/misc.c" path="cmsis_lib/source/misc.c" type="1"/>
+    <File name="cmsis" path="" type="2"/>
     <File name="cmsis_lib/include/stm32f4xx_tim.h" path="cmsis_lib/include/stm32f4xx_tim.h" type="1"/>
     <File name="cmsis_lib" path="" type="2"/>
     <File name="tm_stm32f4_onewire.c" path="tm_stm32f4_onewire.c" type="1"/>
     <File name="init.c" path="init.c" type="1"/>
-    <File name="IRQHandlers.h" path="IRQHandlers.h" type="1"/>
     <File name="cmsis_lib/source" path="" type="2"/>
+    <File name="IRQHandlers.h" path="IRQHandlers.h" type="1"/>
     <File name="Temperature.c" path="Temperature.c" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_tim.c" path="cmsis_lib/source/stm32f4xx_tim.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_gpio.h" path="cmsis_lib/include/stm32f4xx_gpio.h" type="1"/>
@@ -121,7 +121,6 @@
     <File name="cmsis_lib/include" path="" type="2"/>
     <File name="cmsis_lib/include/stm32f4xx_rcc.h" path="cmsis_lib/include/stm32f4xx_rcc.h" type="1"/>
     <File name="Temperature.h" path="Temperature.h" type="1"/>
-    <File name="defines.h" path="defines.h" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_syscfg.c" path="cmsis_lib/source/stm32f4xx_syscfg.c" type="1"/>
     <File name="main.c" path="main.c" type="1"/>
     <File name="tm_stm32f4_delay.c" path="tm_stm32f4_delay.c" type="1"/>

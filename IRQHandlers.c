@@ -15,7 +15,7 @@ void TIM5_IRQHandler(void)
 	{
 		if(TIM_GetITStatus(TIM5, TIM_IT_Update) != RESET)
 			{
-				GPIO_ToggleBits(GPIOD,GPIO_Pin_14);
+				//GPIO_ToggleBits(GPIOD,GPIO_Pin_14);
 			}
 		TIM_ClearITPendingBit(TIM5, TIM_IT_Update);
 	}
@@ -66,7 +66,7 @@ void EXTI9_5_IRQHandler(void)
         }
 	if(EXTI_GetITStatus(EXTI_Line7) != RESET)
 		{
-			GPIO_ToggleBits(GPIOD,GPIO_Pin_15);
+			GPIO_ToggleBits(GPIOB,GPIO_Pin_5);
 			TIM_Cmd(TIM2,ENABLE);
 			while(!TIM_GetFlagStatus(TIM2,TIM_FLAG_Update))
 				{

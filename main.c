@@ -3,7 +3,6 @@
 #include "stm32f4xx_conf.h"
 #include "stm32f4xx_tim.h"
 #include "stm32f4xx_exti.h"
-#include "defines.h"
 #include "tm_stm32f4_delay.h"
 #include "tm_stm32f4_onewire.h"
 #include "tm_stm32f4_ds18b20.h"
@@ -34,7 +33,7 @@ int main(void)
 
 	Init_Exti_Keyboard();
 	TIM2_Init(8399,499);
-	TIM4_Init(83,999);
+	TIM4_Init(166,999);
 	TIM5_Init_PWM(9999,41999);
 	Temperature.Target[0] = 0;
 	Temperature.Target[1] = 3;

@@ -33,6 +33,7 @@ void GPIOB_Init()
 }
 
 
+
 void TIM2_Init(int period,int prescaler)
 {
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,ENABLE);
