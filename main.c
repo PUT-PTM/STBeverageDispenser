@@ -33,8 +33,8 @@ int main(void)
 
 	Init_Exti_Keyboard();
 	TIM2_Init(8399,499);
-	TIM4_Init(166,999);
-	TIM5_Init_PWM(9999,41999);
+	TIM4_Init(10,999);
+	TIM5_Init_PWM(1499,55999);
 	Temperature.Target[0] = 0;
 	Temperature.Target[1] = 3;
 	Temperature.Target[2] = 0;
@@ -42,52 +42,50 @@ int main(void)
 
     TM_OneWire_t OneWire1;
 
-
     TM_DELAY_Init();
 
     TM_OneWire_Init(&OneWire1, GPIOA, GPIO_Pin_7);
-
 
     devices = TM_OneWire_First(&OneWire1);
     TM_OneWire_GetFullROM(&OneWire1, device);
     TM_DS18B20_SetResolution(&OneWire1, device, TM_DS18B20_Resolution_12bits);
     TM_DS18B20_SetAlarmHighTemperature(&OneWire1, device, 100);
     TM_DS18B20_DisableAlarmTemperature(&OneWire1, device);
-    Temperature.target = 300;
+    Temperature.target = 900;
 
     int sum;
 
     while(1)
-    	{
-			TM_DS18B20_StartAll(&OneWire1);
+    {
+		TM_DS18B20_StartAll(&OneWire1);
 
-		    while (!TM_DS18B20_AllDone(&OneWire1));
+		while (!TM_DS18B20_AllDone(&OneWire1));
 
-		        TM_DS18B20_Read(&OneWire1, device, &temps);
+		    TM_DS18B20_Read(&OneWire1, device, &temps);
 
-		        Temperature.current = (int)(temps*10);
-		        UpdateCurrent();
-		        sum = Temperature.target - Temperature.current;
-		        if(integral < 2000 && sum>0)
-		        	integral += sum;
-		        else if(sum<=0)
-		        	{
-		        		integral += sum;
-		        	}
-		        wynik = (K1*(sum) + K2*integral);
-		        if (wynik < 4000 && wynik >= 0)
-		        	{
-		        		wynik = wynik;
-		        		TIM5->CCR2 =wynik;
-		        	}
-		        else if (wynik < 0)
-		        	{
-		        		TIM5->CCR2 = 0;
-		        	}
-		        else
-		        	{
-		        		TIM5-> CCR2 = 4000;
-		        	}
-		        Delayms(1000);
+		    Temperature.current = (int)(temps*10);
+		    UpdateCurrent();
+		    sum = Temperature.target - Temperature.current;
+		    if(integral < 2000 && sum>0)
+		        integral += sum;
+		    else if(sum<=0)
+		    {
+		        integral += sum;
+		    }
+		    wynik = (K1*(sum) + K2*integral);
+		    if (wynik < 2400 && wynik >= 0)
+		    {
+		        	wynik = wynik/4;
+		        	TIM5->CCR2 =wynik;
+		    }
+		    else if (wynik < 0)
+		    {
+		        TIM5->CCR2 = 0;
+		    }
+		    else
+		    {
+		        TIM5-> CCR2 = 600;
+		    }
+		    Delayms(1000);
 }
  }

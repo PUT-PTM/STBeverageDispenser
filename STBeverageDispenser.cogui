@@ -20,61 +20,27 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/PTMProjekt/main.c" title="main.c" tooltip="D:/PTMProjekt/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/PTMProjekt/main.c" title="main.c" tooltip="D:/PTMProjekt/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STBeverageDispenser/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1748" selectionTopPixel="1223"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_delay.h" partName="tm_stm32f4_delay.h" path="D:/PTMProjekt/tm_stm32f4_delay.h" title="tm_stm32f4_delay.h" tooltip="D:/PTMProjekt/tm_stm32f4_delay.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STBeverageDispenser/tm_stm32f4_delay.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4830" selectionTopPixel="2101"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_delay.c" partName="tm_stm32f4_delay.c" path="D:/PTMProjekt/tm_stm32f4_delay.c" title="tm_stm32f4_delay.c" tooltip="D:/PTMProjekt/tm_stm32f4_delay.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STBeverageDispenser/tm_stm32f4_delay.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="647" selectionTopPixel="60"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_onewire.h" partName="tm_stm32f4_onewire.h" path="D:/PTMProjekt/tm_stm32f4_onewire.h" title="tm_stm32f4_onewire.h" tooltip="D:/PTMProjekt/tm_stm32f4_onewire.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STBeverageDispenser/tm_stm32f4_onewire.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="31" selectionOffset="2592" selectionTopPixel="1351"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Temperature.c" partName="Temperature.c" path="D:/PTMProjekt/Temperature.c" title="Temperature.c" tooltip="D:/PTMProjekt/Temperature.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STBeverageDispenser/Temperature.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="749" selectionTopPixel="340"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="IRQHandlers.h" partName="IRQHandlers.h" path="D:/PTMProjekt/IRQHandlers.h" title="IRQHandlers.h" tooltip="D:/PTMProjekt/IRQHandlers.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STBeverageDispenser/IRQHandlers.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="183" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="IRQHandlers.c" partName="IRQHandlers.c" path="D:/PTMProjekt/IRQHandlers.c" title="IRQHandlers.c" tooltip="D:/PTMProjekt/IRQHandlers.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STBeverageDispenser/IRQHandlers.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1391" selectionTopPixel="918"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="init.c" partName="init.c" path="D:/PTMProjekt/init.c" title="init.c" tooltip="D:/PTMProjekt/init.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STBeverageDispenser/init.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1054" selectionTopPixel="609"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="371" selectionTopPixel="1189"/>
 </editor>
 </editors>
 <views>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="21">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="4">
 <expanded>
 <element path="/STBeverageDispenser"/>
 <element path="/STBeverageDispenser/cmsis"/>
 <element path="/STBeverageDispenser/cmsis_boot"/>
 <element path="/STBeverageDispenser/cmsis_boot/startup"/>
-<element path="/STBeverageDispenser/cmsis_lib"/>
-<element path="/STBeverageDispenser/cmsis_lib/include"/>
 </expanded>
+<selection>
+<element path="/STBeverageDispenser/main.c"/>
+</selection>
 </viewState>
 </view>
 <view id="org.coocox.component.ui.ComponentView" partName="Components">
@@ -292,176 +258,170 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/IRQHandlers.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/Temperature.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/init.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/IRQHandlers.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/Temperature.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/Temperature.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/IRQHandlers.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/tm_stm32f4_delay.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/IRQHandlers.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/init.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/tm_stm32f4_delay.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/tm_stm32f4_onewire.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/tm_stm32f4_gpio.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/tm_stm32f4_ds18b20.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/init.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/init.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/tm_stm32f4_gpio.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/IRQHandlers.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/IRQHandlers.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/Temperature.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/cmsis_lib/include/IRQHandlers.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/cmsis_lib/include/tm_stm32f4_onewire.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/cmsis_lib/source/init.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/cmsis_lib/source/IRQHandlers.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/cmsis_lib/source/Temperature.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/cmsis_lib/source/tm_stm32f4_delay.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/STBeverageDispenser/cmsis_lib/include/attributes.h"/>
 </editors>
-<item historyLabel="Temperature.c" index="1">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="IRQHandlers.c" index="1">
+<position info="not_deleted" x="1690" y="0"/>
 </item>
-<item historyLabel="IRQHandlers.h" index="0">
-<position info="not_deleted" x="183" y="0"/>
+<item historyLabel="Temperature.c" index="2">
+<position info="not_deleted" x="618" y="0"/>
 </item>
-<item historyLabel="IRQHandlers.c" index="2">
-<position info="not_deleted" x="1197" y="0"/>
-</item>
-<item historyLabel="Temperature.c" index="3">
-<position info="not_deleted" x="844" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.c" index="2">
-<position info="not_deleted" x="550" y="0"/>
-</item>
-<item historyLabel="Temperature.c" index="3">
-<position info="not_deleted" x="844" y="0"/>
-</item>
-<item historyLabel="Temperature.h" index="4">
-<position info="not_deleted" x="173" y="0"/>
-</item>
-<item historyLabel="Temperature.c" index="3">
-<position info="not_deleted" x="844" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.h" index="5">
-<position info="not_deleted" x="183" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.c" index="2">
-<position info="not_deleted" x="550" y="0"/>
-</item>
-<item historyLabel="Temperature.c" index="3">
-<position info="not_deleted" x="672" y="0"/>
-</item>
-<item historyLabel="Temperature.h" index="4">
-<position info="not_deleted" x="173" y="0"/>
-</item>
-<item historyLabel="Temperature.c" index="3">
-<position info="not_deleted" x="672" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.h" index="5">
-<position info="not_deleted" x="183" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.c" index="2">
-<position info="not_deleted" x="550" y="0"/>
-</item>
-<item historyLabel="Temperature.c" index="3">
-<position info="not_deleted" x="749" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.c" index="2">
-<position info="not_deleted" x="550" y="0"/>
-</item>
-<item historyLabel="main.c" index="6">
-<position info="not_deleted" x="306" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.h" index="7">
-<position info="not_deleted" x="183" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.c" index="2">
-<position info="not_deleted" x="774" y="0"/>
-</item>
-<item historyLabel="init.c" index="8">
-<position info="not_deleted" x="6614" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.c" index="2">
-<position info="not_deleted" x="326" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.h" index="7">
-<position info="not_deleted" x="183" y="0"/>
-</item>
-<item historyLabel="main.c" index="6">
-<position info="not_deleted" x="288" y="0"/>
-</item>
-<item historyLabel="tm_stm32f4_delay.h" index="9">
-<position info="not_deleted" x="5442" y="0"/>
-</item>
-<item historyLabel="tm_stm32f4_delay.h" index="9">
-<position info="not_deleted" x="5244" y="2"/>
-</item>
-<item historyLabel="tm_stm32f4_onewire.h" index="10">
-<position info="not_deleted" x="2638" y="0"/>
-</item>
-<item historyLabel="tm_stm32f4_onewire.h" index="10">
-<position info="not_deleted" x="2590" y="0"/>
-</item>
-<item historyLabel="tm_stm32f4_onewire.h" index="10">
+<item historyLabel="tm_stm32f4_onewire.h" index="6">
 <position info="not_deleted" x="2592" y="31"/>
 </item>
-<item historyLabel="tm_stm32f4_gpio.h" index="11">
-<position info="not_deleted" x="2594" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="680" y="0"/>
 </item>
-<item historyLabel="tm_stm32f4_ds18b20.h" index="12">
-<position info="not_deleted" x="4387" y="0"/>
+<item historyLabel="init.c" index="0">
+<position info="not_deleted" x="818" y="0"/>
 </item>
-<item historyLabel="init.h" index="13">
-<position info="not_deleted" x="355" y="0"/>
+<item historyLabel="IRQHandlers.c" index="1">
+<position info="not_deleted" x="1633" y="0"/>
 </item>
-<item historyLabel="init.c" index="14">
-<position info="not_deleted" x="6616" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="680" y="0"/>
 </item>
-<item historyLabel="init.h" index="13">
-<position info="not_deleted" x="355" y="0"/>
-</item>
-<item historyLabel="init.c" index="14">
-<position info="not_deleted" x="6616" y="0"/>
-</item>
-<item historyLabel="init.h" index="13">
-<position info="not_deleted" x="355" y="0"/>
-</item>
-<item historyLabel="tm_stm32f4_gpio.h" index="15">
-<position info="not_deleted" x="2594" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.c" index="16">
-<position info="not_deleted" x="328" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.h" index="17">
+<item historyLabel="IRQHandlers.h" index="3">
 <position info="not_deleted" x="183" y="0"/>
 </item>
-<item historyLabel="main.c" index="18">
-<position info="not_deleted" x="665" y="0"/>
+<item historyLabel="IRQHandlers.c" index="1">
+<position info="not_deleted" x="1633" y="0"/>
 </item>
-<item historyLabel="init.c" index="14">
-<position info="not_deleted" x="5789" y="0"/>
+<item historyLabel="init.c" index="0">
+<position info="not_deleted" x="818" y="0"/>
 </item>
-<item historyLabel="IRQHandlers.h" index="17">
+<item historyLabel="IRQHandlers.h" index="3">
 <position info="not_deleted" x="183" y="0"/>
 </item>
-<item historyLabel="IRQHandlers.c" index="16">
-<position info="not_deleted" x="313" y="0"/>
+<item historyLabel="init.c" index="0">
+<position info="not_deleted" x="818" y="0"/>
 </item>
-<item historyLabel="main.c" index="18">
-<position info="not_deleted" x="665" y="0"/>
+<item historyLabel="tm_stm32f4_delay.c" index="4">
+<position info="not_deleted" x="647" y="0"/>
 </item>
-<item historyLabel="Temperature.c" index="19">
-<position info="not_deleted" x="749" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="680" y="0"/>
 </item>
-<item historyLabel="init.c" index="14">
-<position info="not_deleted" x="746" y="0"/>
-</item>
-<item historyLabel="IRQHandlers.h" index="17">
+<item historyLabel="IRQHandlers.h" index="3">
 <position info="not_deleted" x="183" y="0"/>
 </item>
-<item historyLabel="IRQHandlers.c" index="16">
-<position info="not_deleted" x="1391" y="0"/>
+<item historyLabel="IRQHandlers.c" index="1">
+<position info="not_deleted" x="1633" y="0"/>
 </item>
-<item historyLabel="main.c" index="18">
-<position info="not_deleted" x="1748" y="0"/>
+<item historyLabel="init.c" index="0">
+<position info="not_deleted" x="818" y="0"/>
 </item>
-<item active="true" historyLabel="init.c" index="14">
-<position info="not_deleted" x="746" y="0"/>
+<item historyLabel="IRQHandlers.c" index="1">
+<position info="not_deleted" x="1633" y="0"/>
+</item>
+<item historyLabel="IRQHandlers.h" index="3">
+<position info="not_deleted" x="183" y="0"/>
+</item>
+<item historyLabel="IRQHandlers.c" index="1">
+<position info="not_deleted" x="310" y="0"/>
+</item>
+<item historyLabel="init.c" index="0">
+<position/>
+</item>
+<item historyLabel="IRQHandlers.c" index="1">
+<position info="not_deleted" x="310" y="0"/>
+</item>
+<item historyLabel="init.c" index="0">
+<position info="not_deleted" x="4981" y="0"/>
+</item>
+<item historyLabel="IRQHandlers.h" index="3">
+<position info="not_deleted" x="183" y="0"/>
+</item>
+<item historyLabel="IRQHandlers.c" index="1">
+<position info="not_deleted" x="2818" y="0"/>
+</item>
+<item historyLabel="init.c" index="0">
+<position info="not_deleted" x="4981" y="0"/>
+</item>
+<item historyLabel="IRQHandlers.h" index="3">
+<position info="not_deleted" x="183" y="0"/>
+</item>
+<item historyLabel="Temperature.c" index="2">
+<position info="not_deleted" x="633" y="0"/>
+</item>
+<item historyLabel="tm_stm32f4_onewire.h" index="6">
+<position info="not_deleted" x="2592" y="31"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="680" y="0"/>
+</item>
+<item historyLabel="IRQHandlers.h" index="7">
+<position info="not_deleted" x="183" y="0"/>
+</item>
+<item historyLabel="tm_stm32f4_onewire.h" index="8">
+<position info="not_deleted" x="2592" y="31"/>
+</item>
+<item historyLabel="init.c" index="9">
+<position info="not_deleted" x="4981" y="0"/>
+</item>
+<item historyLabel="IRQHandlers.c" index="10">
+<position info="not_deleted" x="2818" y="0"/>
+</item>
+<item historyLabel="Temperature.c" index="11">
+<position info="not_deleted" x="633" y="0"/>
+</item>
+<item historyLabel="tm_stm32f4_delay.c" index="12">
+<position info="not_deleted" x="647" y="0"/>
+</item>
+<item historyLabel="attributes.h" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="371" y="0"/>
+</item>
+<item historyLabel="tm_stm32f4_onewire.h" index="8">
+<position info="not_deleted" x="2592" y="31"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="371" y="0"/>
+</item>
+<item historyLabel="IRQHandlers.h" index="7">
+<position info="not_deleted" x="183" y="0"/>
+</item>
+<item historyLabel="IRQHandlers.c" index="10">
+<position info="not_deleted" x="2818" y="0"/>
+</item>
+<item historyLabel="IRQHandlers.h" index="7">
+<position info="not_deleted" x="183" y="0"/>
+</item>
+<item historyLabel="Temperature.c" index="11">
+<position info="not_deleted" x="633" y="0"/>
+</item>
+<item historyLabel="IRQHandlers.h" index="7">
+<position info="not_deleted" x="183" y="0"/>
+</item>
+<item historyLabel="attributes.h" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="IRQHandlers.h" index="7">
+<position info="not_deleted" x="183" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="371" y="0"/>
+</item>
+<item historyLabel="init.c" index="9">
+<position info="not_deleted" x="4981" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="5">
+<position info="not_deleted" x="371" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -470,6 +430,12 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="attributes.h" tooltip="STBeverageDispenser/cmsis_lib/include/attributes.h">
+<persistable path="/STBeverageDispenser/cmsis_lib/include/attributes.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_onewire.c" tooltip="STBeverageDispenser/tm_stm32f4_onewire.c">
+<persistable path="/STBeverageDispenser/tm_stm32f4_onewire.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_ds18b20.h" tooltip="STBeverageDispenser/tm_stm32f4_ds18b20.h">
 <persistable path="/STBeverageDispenser/tm_stm32f4_ds18b20.h"/>
 </file>
@@ -497,9 +463,6 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_ds18b20.c" tooltip="STBeverageDispenser/tm_stm32f4_ds18b20.c">
 <persistable path="/STBeverageDispenser/tm_stm32f4_ds18b20.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_onewire.c" tooltip="STBeverageDispenser/tm_stm32f4_onewire.c">
-<persistable path="/STBeverageDispenser/tm_stm32f4_onewire.c"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32_rcc.c" tooltip="STBeverageDispenser/tm_stm32_rcc.c">
 <persistable path="/STBeverageDispenser/tm_stm32_rcc.c"/>
 </file>
@@ -512,9 +475,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32fxxx_hal.h" tooltip="STBeverageDispenser/stm32fxxx_hal.h">
 <persistable path="/STBeverageDispenser/stm32fxxx_hal.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32_ds18b20.h" tooltip="STBeverageDispenser/tm_stm32_ds18b20.h">
-<persistable path="/STBeverageDispenser/tm_stm32_ds18b20.h"/>
 </file>
 </mruList>
 </workbench>

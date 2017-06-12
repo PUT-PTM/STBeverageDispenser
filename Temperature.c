@@ -18,7 +18,7 @@ void UpdateCurrent()
 
 void Temperature_Increment()
 {
-    if(Temperature.target < 900)
+    if(Temperature.target <= 900)
         Temperature.target+= 10;
     UpdateTarget();
 }
