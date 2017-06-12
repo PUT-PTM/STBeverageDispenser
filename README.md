@@ -41,7 +41,7 @@ PB0	|	1
 stm32 | RL02_ISO
 ---|---
 PA1	|	Water heater circuit	
-PD15 |	Solenoid valve circuit
+PB5 |	Solenoid valve circuit
 
 stm32 | DS18B20
 ---|---
