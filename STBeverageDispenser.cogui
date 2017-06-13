@@ -4,8 +4,8 @@
 <window>
 <fastViewData fastViewLocation="1024">
 <orientation position="512" view="org.eclipse.debug.ui.ExpressionView"/>
-<orientation position="512" view="org.coocox.component.ui.ComponentView"/>
 <orientation position="512" view="org.coocox.builder.ui.views.ProjectView"/>
+<orientation position="512" view="org.coocox.component.ui.ComponentView"/>
 <orientation position="512" view="org.coocox.codebugger.trace.ui.traceview"/>
 <orientation position="512" view="org.eclipse.debug.ui.DebugView"/>
 <orientation position="512" view="org.eclipse.ui.console.ConsoleView"/>
@@ -24,22 +24,22 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/PTMProjekt/main.c" title="main.c" tooltip="D:/PTMProjekt/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Tajne Dokumenty/studia/Sem 4/PTM/STBeverageDispenser/main.c" title="main.c" tooltip="D:/Tajne Dokumenty/studia/Sem 4/PTM/STBeverageDispenser/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/STBeverageDispenser/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="371" selectionTopPixel="1189"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="322" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="4">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
 <expanded>
 <element path="/STBeverageDispenser"/>
-<element path="/STBeverageDispenser/cmsis"/>
-<element path="/STBeverageDispenser/cmsis_boot"/>
-<element path="/STBeverageDispenser/cmsis_boot/startup"/>
+<element path="/STBeverageDispenser/implementation"/>
+<element path="/STBeverageDispenser/implementation/include"/>
+<element path="/STBeverageDispenser/implementation/source"/>
 </expanded>
 <selection>
-<element path="/STBeverageDispenser/main.c"/>
+<element path="/STBeverageDispenser/implementation/source"/>
 </selection>
 </viewState>
 </view>
@@ -152,7 +152,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.4499151" ratioLeft="265" ratioRight="324" relationship="4" relative="org.coocox.builder.ui.exampleView"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1f44aa6" ratio="0.36842105" ratioLeft="217" ratioRight="372" relationship="4" relative="org.eclipse.ui.internal.ViewStack@12c08c7">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1f44aa6" ratio="0.041847043" ratioLeft="29" ratioRight="664" relationship="4" relative="org.eclipse.ui.internal.ViewStack@12c08c7">
 <folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
 <page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -430,11 +430,11 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="attributes.h" tooltip="STBeverageDispenser/cmsis_lib/include/attributes.h">
-<persistable path="/STBeverageDispenser/cmsis_lib/include/attributes.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_tim.h" tooltip="STBeverageDispenser/cmsis_lib/include/stm32f4xx_tim.h">
+<persistable path="/STBeverageDispenser/cmsis_lib/include/stm32f4xx_tim.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_onewire.c" tooltip="STBeverageDispenser/tm_stm32f4_onewire.c">
-<persistable path="/STBeverageDispenser/tm_stm32f4_onewire.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="init.c" tooltip="STBeverageDispenser/init.c">
+<persistable path="/STBeverageDispenser/init.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_ds18b20.h" tooltip="STBeverageDispenser/tm_stm32f4_ds18b20.h">
 <persistable path="/STBeverageDispenser/tm_stm32f4_ds18b20.h"/>
@@ -442,35 +442,35 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_gpio.h" tooltip="STBeverageDispenser/tm_stm32f4_gpio.h">
 <persistable path="/STBeverageDispenser/tm_stm32f4_gpio.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="init.h" tooltip="STBeverageDispenser/init.h">
-<persistable path="/STBeverageDispenser/init.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="init.c" tooltip="STBeverageDispenser/init.c">
-<persistable path="/STBeverageDispenser/init.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="IRQHandlers.c" tooltip="STBeverageDispenser/IRQHandlers.c">
-<persistable path="/STBeverageDispenser/IRQHandlers.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="IRQHandlers.h" tooltip="STBeverageDispenser/IRQHandlers.h">
-<persistable path="/STBeverageDispenser/IRQHandlers.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Temperature.c" tooltip="STBeverageDispenser/Temperature.c">
 <persistable path="/STBeverageDispenser/Temperature.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Temperature.h" tooltip="STBeverageDispenser/Temperature.h">
 <persistable path="/STBeverageDispenser/Temperature.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_ds18b20.c" tooltip="STBeverageDispenser/tm_stm32f4_ds18b20.c">
-<persistable path="/STBeverageDispenser/tm_stm32f4_ds18b20.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="init.h" tooltip="STBeverageDispenser/init.h">
+<persistable path="/STBeverageDispenser/init.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32_rcc.c" tooltip="STBeverageDispenser/tm_stm32_rcc.c">
-<persistable path="/STBeverageDispenser/tm_stm32_rcc.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="IRQHandlers.h" tooltip="STBeverageDispenser/IRQHandlers.h">
+<persistable path="/STBeverageDispenser/IRQHandlers.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_hal.h" tooltip="STBeverageDispenser/stm32f4xx_hal.h">
-<persistable path="/STBeverageDispenser/stm32f4xx_hal.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="IRQHandlers.c" tooltip="STBeverageDispenser/IRQHandlers.c">
+<persistable path="/STBeverageDispenser/IRQHandlers.c"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="init.c" tooltip="D:\Tajne Dokumenty\studia\Sem 4\PTM\STBeverageDispenser\init.c">
+<persistable uri="file:/D:/Tajne%20Dokumenty/studia/Sem%204/PTM/STBeverageDispenser/init.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="STBeverageDispenser/main.c">
+<persistable path="/STBeverageDispenser/main.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_stm32f4xx.c" tooltip="STBeverageDispenser/cmsis_boot/system_stm32f4xx.c">
+<persistable path="/STBeverageDispenser/cmsis_boot/system_stm32f4xx.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx.h" tooltip="STBeverageDispenser/cmsis_boot/stm32f4xx.h">
+<persistable path="/STBeverageDispenser/cmsis_boot/stm32f4xx.h"/>
 </file>
 <file factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" tooltip="Repository">
-<persistable>&#x0A;<subPage/>
+<persistable>&#x0A;<subPage horizontalPosition="0" selectedItemId="504" subPageIndex="2" verticalPosition="720"/>
 </persistable>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32fxxx_hal.h" tooltip="STBeverageDispenser/stm32fxxx_hal.h">
